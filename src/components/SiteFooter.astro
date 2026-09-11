@@ -1,0 +1,25 @@
+---
+const PLAY_URL = "https://app.pufferpanic.com";
+const year = new Date().getFullYear();
+---
+
+<footer class="bg-title py-16 text-white">
+  <div class="mx-auto max-w-6xl px-6 text-center">
+    <img src="/favicon.svg" alt="" class="mx-auto h-10 w-10" />
+    <h2 class="mt-4 text-2xl font-extrabold">
+      Ready to help the puffer fish?
+    </h2>
+    <p class="mt-2 text-white/70">
+      Free, ad-free, and ready in your browser.
+    </p>
+    <a
+      href={PLAY_URL}
+      class="btn-pill btn-primary mt-6 inline-flex px-8 py-4 text-lg"
+    >
+      ▶ Play Now
+    </a>
+    <p class="mt-10 text-sm text-white/50">
+      &copy; {year} Puffer Panic. Made for kids learning to read.
+    </p>
+  </div>
+</footer>

@@ -1,0 +1,119 @@
+---
+import { Image } from "astro:assets";
+import roundScreenshot from "../assets/screenshots/round.png";
+import victoryScreenshot from "../assets/screenshots/victory.png";
+---
+
+<section id="how-it-works" class="py-20">
+  <div class="mx-auto max-w-6xl px-6">
+    <p class="text-sm font-bold uppercase tracking-wide text-accent-shadow">
+      How it works
+    </p>
+    <h2 class="mt-3 max-w-2xl text-3xl font-extrabold text-title sm:text-4xl">
+      Simple enough for a five-year-old. Replayable enough that they'll
+      actually want to.
+    </h2>
+
+    <!-- Block 1: listen and pick -->
+    <div class="mt-16 grid items-center gap-12 md:grid-cols-2">
+      <div>
+        <p class="text-sm font-bold text-accent-shadow">Step 1 · Listen &amp; pick</p>
+        <h3 class="mt-2 text-2xl font-extrabold text-title">
+          Hear the word. Tap the card that spells it.
+        </h3>
+        <p class="mt-4 text-ink/80">
+          A friendly voice asks "Which one spells <em>look</em>?" and three
+          flash cards show sight words pulled from the Dolch pre-primer and
+          primer lists — the words most kids meet first when they start
+          reading.
+        </p>
+        <ul class="mt-6 space-y-3 text-ink/80">
+          <li>
+            <span class="font-bold text-title">One correct card, two decoys</span>
+            — close enough to keep it a real spelling check, not a guess.
+          </li>
+          <li>
+            <span class="font-bold text-title">"Say it again" button</span>
+            — no penalty for replaying the audio as many times as needed.
+          </li>
+          <li>
+            <span class="font-bold text-title">Pick your own word list</span>
+            — a "Choose words" picker lets a parent or kid focus practice
+            on specific words.
+          </li>
+        </ul>
+      </div>
+      <div class="mx-auto w-full max-w-md">
+        <Image
+          src={roundScreenshot}
+          alt="A round of Puffer Panic showing three word cards to choose from"
+          width={720}
+          class="rounded-3xl border-4 border-white shadow-xl"
+        />
+      </div>
+    </div>
+
+    <!-- Block 2: growth and scoring -->
+    <div class="mt-24 grid items-center gap-12 md:grid-cols-2">
+      <div class="order-2 mx-auto w-full max-w-md md:order-1">
+        <Image
+          src={victoryScreenshot}
+          alt="Puffer Panic victory screen: PUFFER POWER!"
+          width={720}
+          class="rounded-3xl border-4 border-white shadow-xl"
+        />
+      </div>
+      <div class="order-1 md:order-2">
+        <p class="text-sm font-bold text-accent-shadow">Step 2 · Grow the puffer</p>
+        <h3 class="mt-2 text-2xl font-extrabold text-title">
+          Every correct answer makes the puffer bigger.
+        </h3>
+        <p class="mt-4 text-ink/80">
+          Each game is 5 rounds. The shark closes in every round no matter
+          what — so the only way to keep the puffer safe is to keep getting
+          words right.
+        </p>
+        <ul class="mt-6 space-y-3 text-ink/80">
+          <li><span class="font-bold text-title">5 of 5</span> — "PUFFER POWER!" — the puffer puffs up huge and sends the predator packing.</li>
+          <li><span class="font-bold text-title">3–4 of 5</span> — a close call, scratched but safe.</li>
+          <li><span class="font-bold text-title">0–2 of 5</span> — "Chomp!" — time to try again.</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Block 3: escalating predators -->
+    <div class="mt-24 rounded-3xl bg-white p-8 ring-1 ring-card-edge sm:p-12">
+      <p class="text-sm font-bold text-accent-shadow">Step 3 · Face something new</p>
+      <h3 class="mt-2 text-2xl font-extrabold text-title">
+        Play again and the predator changes.
+      </h3>
+      <p class="mt-4 max-w-2xl text-ink/80">
+        Every game bumps the puffer up against a different threat, cycling
+        through ten increasingly dramatic predators before starting over.
+        It doesn't change the difficulty of the words — it just keeps the
+        game visually fresh, which turns out to matter a lot to a kid
+        deciding whether to play one more round.
+      </p>
+      <div class="mt-6 flex flex-wrap gap-2 text-sm font-semibold text-title">
+        {
+          [
+            "Shark",
+            "Two sharks",
+            "Eels",
+            "Piranhas",
+            "Anglerfish",
+            "Catfish",
+            "Orca",
+            "Megalodon",
+            "Mosasaurus",
+            "Kraken",
+          ].map((predator) => (
+            <span class="rounded-full bg-sea px-3 py-1 ring-1 ring-card-edge">
+              {predator}
+            </span>
+          ))
+        }
+      </div>
+    </div>
+  </div>
+</section>
