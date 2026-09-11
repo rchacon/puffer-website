@@ -1,0 +1,29 @@
+---
+const PLAY_URL = "https://app.pufferpanic.com";
+---
+
+<header
+  class="sticky top-0 z-50 border-b border-card-edge/60 bg-sea/80 backdrop-blur"
+>
+  <div
+    class="mx-auto flex max-w-6xl items-center justify-between px-6 py-4"
+  >
+    <a href="#" class="flex items-center gap-2">
+      <img src="/favicon.svg" alt="" class="h-9 w-9" />
+      <span class="text-xl font-extrabold text-title">Puffer Panic</span>
+    </a>
+
+    <nav class="hidden items-center gap-8 text-sm font-semibold text-ink md:flex">
+      <a href="#how-it-works" class="hover:text-accent">How it works</a>
+      <a href="#ad-free" class="hover:text-accent">Why ad-free</a>
+      <a href="#our-story" class="hover:text-accent">Our story</a>
+    </nav>
+
+    <a
+      href={PLAY_URL}
+      class="btn-pill btn-primary px-5 py-2.5 text-sm"
+    >
+      ▶ Play Now
+    </a>
+  </div>
+</header>

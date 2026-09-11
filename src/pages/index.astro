@@ -1,0 +1,22 @@
+---
+import Layout from "../layouts/Layout.astro";
+import SiteHeader from "../components/SiteHeader.astro";
+import Hero from "../components/Hero.astro";
+import AdFreeSection from "../components/AdFreeSection.astro";
+import HowItWorks from "../components/HowItWorks.astro";
+import OriginStory from "../components/OriginStory.astro";
+import SiteFooter from "../components/SiteFooter.astro";
+
+const title = "Puffer Panic — An ad-free sight words game for kids";
+const description =
+  "Puffer Panic is a free, ad-free sight words game where kids help a puffer fish survive a shark by spelling words correctly. No ads, no tracking, no accounts.";
+---
+
+<Layout title={title} description={description}>
+  <SiteHeader />
+  <Hero />
+  <AdFreeSection />
+  <HowItWorks />
+  <OriginStory />
+  <SiteFooter />
+</Layout>

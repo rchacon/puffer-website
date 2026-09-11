@@ -1,0 +1,45 @@
+---
+const points = [
+  {
+    title: "No ads. Ever.",
+    body: "No banner ads, no video ads between rounds, no 'watch this to keep playing.' Nothing to click on except the game.",
+  },
+  {
+    title: "No accounts, no tracking",
+    body: "Puffer Panic doesn't ask for an email, doesn't build a profile, and doesn't need to know anything about your kid to work.",
+  },
+  {
+    title: "Nothing fighting for attention",
+    body: "No push notifications, no streaks designed to guilt a five-year-old back in, no in-app purchases. Just sight words and a fish.",
+  },
+];
+---
+
+<section id="ad-free" class="bg-title py-20 text-white">
+  <div class="mx-auto max-w-6xl px-6">
+    <p class="text-sm font-bold uppercase tracking-wide text-sea-deep">
+      Why ad-free matters
+    </p>
+    <h2 class="mt-3 max-w-2xl text-3xl font-extrabold sm:text-4xl">
+      Kids' apps are usually built to hold attention. This one is built to
+      teach sight words.
+    </h2>
+    <p class="mt-6 max-w-2xl text-white/80">
+      A lot of "educational" games for kids are really attention-harvesting
+      machines with a learning objective bolted on. Puffer Panic has one
+      job: help a kid recognize a sight word. That's it — so there's no
+      reason to put anything else in the way.
+    </p>
+
+    <div class="mt-12 grid gap-8 sm:grid-cols-3">
+      {
+        points.map((point) => (
+          <div class="rounded-2xl bg-white/5 p-6 ring-1 ring-white/10">
+            <h3 class="text-lg font-bold">{point.title}</h3>
+            <p class="mt-2 text-sm text-white/70">{point.body}</p>
+          </div>
+        ))
+      }
+    </div>
+  </div>
+</section>
