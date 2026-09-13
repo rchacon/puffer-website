@@ -2,6 +2,28 @@
 import { Image } from "astro:assets";
 import roundScreenshot from "../assets/screenshots/round.png";
 import victoryScreenshot from "../assets/screenshots/victory.png";
+import sharkPrincessScreenshot from "../assets/screenshots/predators/shark-princess.png";
+import megalodonScreenshot from "../assets/screenshots/predators/megalodon.png";
+import mosasaurusScreenshot from "../assets/screenshots/predators/mosasaurus.png";
+import piranhaScreenshot from "../assets/screenshots/predators/piranha.png";
+import eelScreenshot from "../assets/screenshots/predators/eel.png";
+import anglerfishScreenshot from "../assets/screenshots/predators/anglerfish.png";
+import krakenScreenshot from "../assets/screenshots/predators/kraken.png";
+
+// In escalation order (see PREDATOR_LEVELS in the game repo's
+// src/game/predators.ts) -- the plain shark (levels 1-2) is skipped since
+// it's already shown elsewhere on this page (the round/victory screenshots
+// above), and this block is specifically about the escalating threats past
+// that baseline.
+const PREDATORS = [
+  { name: "The Shark Princess", src: sharkPrincessScreenshot },
+  { name: "The Megalodon", src: megalodonScreenshot },
+  { name: "The Mosasaurus", src: mosasaurusScreenshot },
+  { name: "The Piranhas", src: piranhaScreenshot },
+  { name: "The Electric Eels", src: eelScreenshot },
+  { name: "The Anglerfish", src: anglerfishScreenshot },
+  { name: "The Kraken", src: krakenScreenshot },
+];
 ---
 
 <section id="how-it-works" class="py-20">
@@ -94,23 +116,20 @@ import victoryScreenshot from "../assets/screenshots/victory.png";
         game visually fresh, which turns out to matter a lot to a kid
         deciding whether to play one more round.
       </p>
-      <div class="mt-6 flex flex-wrap gap-2 text-sm font-semibold text-title">
+      <div class="mt-8 grid grid-cols-2 gap-4 sm:grid-cols-3 sm:gap-6 lg:grid-cols-4">
         {
-          [
-            "Shark",
-            "Two sharks",
-            "Eels",
-            "Piranhas",
-            "Anglerfish",
-            "Catfish",
-            "Orca",
-            "Megalodon",
-            "Mosasaurus",
-            "Kraken",
-          ].map((predator) => (
-            <span class="rounded-full bg-sea px-3 py-1 ring-1 ring-card-edge">
-              {predator}
-            </span>
+          PREDATORS.map((predator) => (
+            <div>
+              <Image
+                src={predator.src}
+                alt={`${predator.name} approaching the puffer fish in Puffer Panic`}
+                width={480}
+                class="w-full rounded-2xl border-4 border-white shadow-lg"
+              />
+              <p class="mt-2 text-center text-sm font-bold text-title">
+                {predator.name}
+              </p>
+            </div>
           ))
         }
       </div>
