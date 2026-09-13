@@ -2,6 +2,7 @@
 import { Image } from "astro:assets";
 import roundScreenshot from "../assets/screenshots/round.png";
 import victoryScreenshot from "../assets/screenshots/victory.png";
+import twoSharksScreenshot from "../assets/screenshots/predators/two-sharks.png";
 import sharkPrincessScreenshot from "../assets/screenshots/predators/shark-princess.png";
 import megalodonScreenshot from "../assets/screenshots/predators/megalodon.png";
 import mosasaurusScreenshot from "../assets/screenshots/predators/mosasaurus.png";
@@ -11,11 +12,13 @@ import anglerfishScreenshot from "../assets/screenshots/predators/anglerfish.png
 import krakenScreenshot from "../assets/screenshots/predators/kraken.png";
 
 // In escalation order (see PREDATOR_LEVELS in the game repo's
-// src/game/predators.ts) -- the plain shark (levels 1-2) is skipped since
-// it's already shown elsewhere on this page (the round/victory screenshots
-// above), and this block is specifically about the escalating threats past
-// that baseline.
+// src/game/predators.ts) -- the solo shark (level 1) is skipped since it's
+// already shown elsewhere on this page (the round/victory screenshots
+// above), but the two-shark level is included as the first step up from
+// that baseline, and rounds the grid out to 8 for a symmetrical 4x2/2x4
+// layout instead of 7's awkward trailing single item.
 const PREDATORS = [
+  { name: "The Two Sharks", src: twoSharksScreenshot },
   { name: "The Shark Princess", src: sharkPrincessScreenshot },
   { name: "The Megalodon", src: megalodonScreenshot },
   { name: "The Mosasaurus", src: mosasaurusScreenshot },
