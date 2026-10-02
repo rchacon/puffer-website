@@ -1,7 +1,7 @@
 @import "tailwindcss";
 
 @theme {
-  /* Palette sampled directly from the Puffer Panic game (src/index.css) */
+  /* Palette sampled directly from the Puffer Power game (src/index.css) */
   --color-ink: #0b2a3f;
   --color-title: #0b3a5b;
   --color-sea: #e8f7ff;
