@@ -1,6 +1,6 @@
-# Puffer Panic Website
+# Puffer Power Website
 
-The marketing site for [Puffer Panic](https://app.pufferpanic.com), an
+The marketing site for [Puffer Power](https://app.pufferpower.com), an
 ad-free sight words game for kids. Built with [Astro](https://astro.build)
 and Tailwind CSS v4 — a single static site, no framework, no backend.
 
